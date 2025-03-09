@@ -1,0 +1,311 @@
+:root {
+    --primary-color: #3a86ff;
+    --secondary-color: #8338ec;
+    --text-color: #333;
+    --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    --transition: all 0.3s ease;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: var(--text-color);
+    background-color: #f8f9fa;
+}
+
+#map {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    transition: filter 0.5s ease;
+}
+
+#info {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 320px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: var(--box-shadow);
+    border-radius: 12px;
+    z-index: 1000;
+    transform: translateX(400px);
+    opacity: 0;
+    transition: var(--transition);
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+#info.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+#info h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+#tooltip {
+    position: absolute;
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    z-index: 1000;
+    display: none;
+    transform: translate(-50%, -100%);
+    margin-top: -10px;
+    box-shadow: var(--box-shadow);
+    transition: opacity 0.2s;
+}
+
+#search {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 300px;
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+#search input {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+#search input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.3), var(--box-shadow);
+}
+
+#copyright {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    z-index: 1000;
+}
+
+#search-suggestions {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    background-color: white;
+    border-radius: 8px;
+    width: 100%;
+    z-index: 1000;
+    display: none;
+    max-height: 300px;
+    overflow-y: auto;
+    box-shadow: var(--box-shadow);
+}
+
+#search-suggestions div {
+    padding: 12px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#search-suggestions div:hover {
+    background-color: rgba(58, 134, 255, 0.1);
+}
+
+.leaflet-control-zoom {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow) !important;
+}
+
+.leaflet-control-zoom a {
+    width: 40px !important;
+    height: 40px !important;
+    line-height: 40px !important;
+    font-size: 18px !important;
+}
+
+.country-details {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.country-details.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.flag-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.flag-container img {
+    margin-right: 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.detail-item {
+    display: flex;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.detail-label {
+    font-weight: 600;
+    width: 100px;
+    color: var(--primary-color);
+}
+
+.loading {
+    text-align: center;
+    padding: 20px;
+}
+
+.loading:after {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgba(58, 134, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: var(--primary-color);
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(58, 134, 255, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(58, 134, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(58, 134, 255, 0);
+    }
+}
+
+#welcome-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    z-index: 2000;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+#welcome-message h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+#welcome-message button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: background-color 0.2s;
+}
+
+#welcome-message button:hover {
+    background-color: var(--secondary-color);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, -60%); }
+    to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Dark mode toggle */
+#dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 80px;
+    background-color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.dark-mode {
+    --text-color: #f0f0f0;
+    --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode #info,
+.dark-mode #search input,
+.dark-mode #search-suggestions,
+.dark-mode #welcome-message,
+.dark-mode #copyright {
+    background-color: #2b2b2b;
+    color: var(--text-color);
+}
+
+.dark-mode #info h2 {
+    border-bottom-color: var(--secondary-color);
+}
+
+.dark-mode .detail-item {
+    border-bottom-color: #444;
+}
+
+.dark-mode #search-suggestions div:hover {
+    background-color: #3a3a3a;
+}
+
+.dark-mode #map {
+    filter: brightness(0.85) saturate(1.2);
+}
