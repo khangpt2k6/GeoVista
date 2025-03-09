@@ -25,7 +25,7 @@ The application includes a thoughtfully designed dark mode for comfortable viewi
 GeoVista is built using modern web technologies with a focus on performance and user experience:
 
 **Frontend:** HTML5, CSS3, JavaScript (ES6+)
-**Map Rendering: **Leaflet.js
+**Map Rendering:** Leaflet.js
 **Data Sources:**
 
 GeoJSON country boundaries
