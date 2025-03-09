@@ -37,6 +37,7 @@ GeoVista is built using modern web technologies with a focus on performance and 
 **Data Sources:**
 
 GeoJSON country boundaries
+
 RESTCountries API for country details
 
 
