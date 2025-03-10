@@ -4,42 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
-    <title>GeoVista</title>
+    <title>GeoVista - Interactive World Explorer</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="welcome-message">
-        <h2>Welcome to Interactive World Map</h2>
-        <p>Explore countries by clicking on the map or using the search box. View detailed information about each country.</p>
-        <button id="start-exploring">Start Exploring</button>
+        <div class="logo-container">
+            <i class="fas fa-globe-americas fa-3x" style="background: linear-gradient(135deg, #1a73e8, #7b2cbf); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
+        </div>
+        <h2>Welcome to GeoVista</h2>
+        <p>Embark on a journey around the world with our interactive map. Discover fascinating facts about countries, explore different regions, and expand your geographical knowledge.</p>
+        <button id="start-exploring"><i class="fas fa-compass"></i> Start Exploring</button>
     </div>
     
     <div id="copyright">
-        <p>Copyright of Tuan Khang Phan khang18@usf.edu</p>
+        <p><i class="far fa-copyright"></i> Created by Tuan Khang Phan | khang18@usf.edu</p>
     </div>
     
     <div id="search">
-        <input type="text" id="searchBox" placeholder="Search for a country...">
+        <div class="search-container">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="searchBox" placeholder="Search for a country...">
+        </div>
         <div id="search-suggestions"></div>
     </div>
     
     <div id="map"></div>
     
     <div id="info">
-        <h2>Country Information</h2>
+        <h2><i class="fas fa-info-circle"></i> Country Information</h2>
         <p id="details">Click on a country to view its information.</p>
     </div>
     
     <div id="tooltip"></div>
     
     <button id="dark-mode-toggle" title="Toggle Dark Mode">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 3V4M12 20V21M4 12H3M21 12H20M6.31 6.31L5.6 5.6M18.4 18.4L17.69 17.69M18.4 5.6L17.69 6.31M6.31 17.69L5.6 18.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            <path d="M12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17Z" stroke="currentColor" stroke-width="2"/>
-        </svg>
+        <i class="fas fa-moon"></i>
     </button>
+    
+    <div id="continent-filter">
+        <button class="active" data-continent="all">All</button>
+        <button data-continent="africa">Africa</button>
+        <button data-continent="asia">Asia</button>
+        <button data-continent="europe">Europe</button>
+        <button data-continent="namerica">North America</button>
+        <button data-continent="samerica">South America</button>
+        <button data-continent="oceania">Oceania</button>
+    </div>
 
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
     <script src="script.js"></script>
