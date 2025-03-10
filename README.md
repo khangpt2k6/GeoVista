@@ -1,29 +1,35 @@
 **GeoVista - Interactive World Map**
 
 GeoVista is a modern, feature-rich interactive world map application that allows users to explore countries and learn detailed information through an intuitive interface.
-![image](https://github.com/user-attachments/assets/2ec7bca6-464b-4a3b-9b17-931fa24add5e)
+![image](https://github.com/user-attachments/assets/813eca3d-2a00-4abc-bea4-cb3ce370827f)
+
 
 **Features**
 
 **Interactive Country Selection**
 
 Users can click directly on countries to view detailed information, with smooth animations and visual feedback.
-![image](https://github.com/user-attachments/assets/a1b71e4e-c364-47ad-ab32-340302aa3b13)
+![image](https://github.com/user-attachments/assets/83c2f879-5acf-4d0a-a6c9-fc3a86115f30)
+
 
 **Intelligent Search**
 
 The application includes a powerful search feature with real-time suggestions as you type, making it easy to find countries quickly.
-![image](https://github.com/user-attachments/assets/fb707de4-6d68-4480-b7b9-5cfdf3986a4f)
+![image](https://github.com/user-attachments/assets/77be330a-179d-44b9-a784-9f5b003160c2)
 
 **Dynamic Map Controls**
 
 Intuitive zoom and pan controls allow users to navigate the map interface seamlessly.
-![image](https://github.com/user-attachments/assets/578c5cb2-2725-4c2a-84db-1b4b16dc3a8c)
+![image](https://github.com/user-attachments/assets/46c565fc-5286-44cf-bb8a-f570333e80d4)
+
 
 **Dark Mode Support**
 
 The application includes a thoughtfully designed dark mode for comfortable viewing in low-light environments.
-![image](https://github.com/user-attachments/assets/00687555-8710-40b5-97b0-d10f8472f132)
+![image](https://github.com/user-attachments/assets/81abf7cc-2c91-435b-ae57-6bd2cc202987)
+
+![image](https://github.com/user-attachments/assets/86c48785-5dd0-4ffb-8a05-adf0ad060bdb)
+
 
 **Technical Specifications**
 
