@@ -60,3 +60,27 @@ RESTCountries API for country details
 **Intelligent Caching:** Optimized data loading for improved performance
 
 **Customizable Map Styles:** Light and dark modes with seamless transitions
+
+## How to Run the Project
+
+To set up and run this project locally, follow these steps:
+
+### 1. Install Visual Studio Code
+Download and install **[Visual Studio Code](https://code.visualstudio.com/)** if you haven't already.
+
+### 2. Install Live Server Extension
+In VS Code, install the **Live Server** extension by following these steps:
+- Open **Extensions** (`Ctrl + Shift + X` on Windows/Linux or `Cmd + Shift + X` on macOS).
+- Search for **Live Server** and click **Install**.
+- Alternatively, you can find it on the [Live Server Extension Marketplace](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
+
+### 3. Run the Project
+1. Open the project folder in **VS Code**.
+2. Locate the `index.html` file.
+3. Start the Live Server using one of these methods:
+   - Press `Alt + L, Alt + O` (Windows/Linux).
+   - Right-click `index.html` and select **Open with Live Server**.
+
+Your project should now be running in your default web browser.
+
+
