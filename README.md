@@ -72,6 +72,8 @@ In VS Code, install the **Live Server** extension:
 
    ```bash
    npm install --force
+
+
    ```npm run dev ```
 
 2. Access the following link:
