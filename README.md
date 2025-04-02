@@ -70,8 +70,7 @@ In VS Code, install the **Live Server** extension:
 ### 3️⃣ Run the Project  
 1. Run the following command to install dependencies:
 
-   ```bash
-   npm install --force
+   ```npm install --force```
 
 
    ```npm run dev ```
