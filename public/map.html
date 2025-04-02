@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
+    <title>GeoVista - Interactive World Explorer</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add Supabase Client -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div id="welcome-message">
+        <div class="logo-container">
+            <i class="fas fa-globe-americas fa-3x" style="background: linear-gradient(135deg, #1a73e8, #7b2cbf); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
+        </div>
+        <h2>Welcome to GeoVista</h2>
+        <p>Embark on a journey around the world with our interactive map. Discover fascinating facts about countries, explore different regions, and expand your geographical knowledge.</p>
+        <button id="start-exploring"><i class="fas fa-compass"></i> Start Exploring</button>
+    </div>
+    
+    <div id="copyright">
+        <p><i class="far fa-copyright"></i> Created by Tuan Khang Phan | <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fa91929b949dcbc2ba8f899cd49f9e8f">[email&#160;protected]</a></p>
+    </div>
+    
+    <div id="search">
+        <div class="search-container">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="searchBox" placeholder="Search for a country...">
+        </div>
+        <div id="search-suggestions"></div>
+    </div>
+    
+    <div id="map"></div>
+    
+    <div id="info">
+        <h2><i class="fas fa-info-circle"></i> Country Information</h2>
+        <p id="details">Click on a country to view its information.</p>
+    </div>
+    
+    <div id="tooltip"></div>
+    
+    <button id="dark-mode-toggle" title="Toggle Dark Mode">
+        <i class="fas fa-moon"></i>
+    </button>
+    
+    <div id="continent-filter">
+        <button class="active" data-continent="all">All</button>
+        <button data-continent="africa">Africa</button>
+        <button data-continent="asia">Asia</button>
+        <button data-continent="europe">Europe</button>
+        <button data-continent="namerica">North America</button>
+        <button data-continent="samerica">South America</button>
+        <button data-continent="oceania">Oceania</button>
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+    <!-- Add our custom components -->
+    <script src="map-components.js"></script>
+</body>
+</html>
+
